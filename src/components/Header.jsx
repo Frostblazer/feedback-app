@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 function Header({ text, bgColor, textColor }) {
   const headerStyles = {
@@ -21,11 +21,10 @@ Header.defaultProps = {
   textColor: "#ff6a95",
 };
 
-// eslint-disable-next-line react/no-typos
-Header.PropTypes = {
-  text: PropTypes.string,
-  bgColor: PropTypes.string,
-  textColor: PropTypes.strings,
+Header.propTypes = {
+  text: propTypes.string,
+  bgColor: propTypes.string,
+  textColor: propTypes.string,
 };
 
 export default Header;
