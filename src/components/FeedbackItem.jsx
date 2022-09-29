@@ -1,10 +1,16 @@
 import React from "react";
+import Card from "./shared/Card";
+import PropTypes from "prop-types";
 
-export default function FeedbackItem({ item }) {
+export default function FeedbackItem({ item, reverse }) {
   return (
-    <div className="card">
+    <Card reverse={reverse}>
       <div className="num-display">{item.rating}</div>
       <div className="text-display">{item.text}</div>
-    </div>
+    </Card>
   );
 }
+
+FeedbackItem.propTypes = {
+  item: PropTypes.object.isRequired,
+};
